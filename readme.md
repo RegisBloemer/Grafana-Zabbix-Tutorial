@@ -67,13 +67,13 @@ Este tutorial ensina como integrar o Grafana com o Zabbix utilizando o plugin Gr
 2. No painel do Grafana, acesse Administration > Plugins and data, e depois clique sobre Plugins. Procure na barra de pesquisa por Zabbix. Será mostrado como abaixo o plugin, clique sobre ele:
 
 > **Imagem:**  
-> ![Ativando o Plugin](plugin_zabbix.png)
+> ![Ativando o Plugin](images/plugin_zabbix.png)
 
 Na página seguinte, procure pelo botão Enable como abaixo e clique para habilitar o plugin:
 
 
 > **Imagem:**  
-> ![Ativando o Plugin](plugin.png)
+> ![Ativando o Plugin](images/enable_plugin.png)
 
 ## Passo 3: Configurar o Data Source do Zabbix
 Depois de ativar o plugin, é necessário configurar o Zabbix como fonte de dados no Grafana.
@@ -81,18 +81,18 @@ Depois de ativar o plugin, é necessário configurar o Zabbix como fonte de dado
 
 1. Acesse Configuration > Data Sources no painel do Grafana e clique em Add data source.
 
-![Adicionar data source](data_source.png)
+![Adicionar data source](images/data_source.png)
 
 2. Pesquise e clique sobre a opção Zabbix como tipo de fonte de dados.
 
-![Selecione o Zabbix](select_zabbix.png)
+![Selecione o Zabbix](images/select_zabbix.png)
 
 3. Preencha os campos com as informações do seu servidor Zabbix:
    - **URL:** Informe o endereço do seu servidor Zabbix, incluindo o caminho para a API, por exemplo:  
      `http://seu-servidor/zabbix/api_jsonrpc.php`
    - **Access:** Selecione o modo de acesso adequado (geralmente, "Server").
 
-![alt text](address_zabbix.png)
+![alt text](images/address_zabbix.png)
 
 4. Autentication: este você pode deixar como “No Authentication“, a parte das credencias para o zabbix você insere no próximo campo.
 
@@ -100,12 +100,12 @@ Depois de ativar o plugin, é necessário configurar o Zabbix como fonte de dado
 
 6. Zabbix Connection: aqui de você escolhe o método de autenticação para se conectar no Zabbix. Utiliza Usuário e senha ou API Token(suportado a partir das versões 6.0x do Zabbix)
 
-![COnfiguração](configuration.png)
+![COnfiguração](images/configuration.png)
 
-Para conseguir o token você deve acessar o Zabbix, clicar em users depois em API tokens e criar um novo token. Depois de criar o token, copie o mesmo e cole no campo do Grafana.
-![alt text](tokens.png)
+Para conseguir o token você deve acessar o Zabbix, clicar em users depois em API images/tokens.png e criar um novo token. Depois de criar o token, copie o mesmo e cole no campo do Grafana.
+![alt text](images/tokens.png)
 
-Clique em Save & Test. Se aparecer a mensagem abaixo em verde, a conexão está funcional. ![Validar conexão](<save.png>)
+Clique em Save & Test. Se aparecer a mensagem abaixo em verde, a conexão está funcional. ![Validar conexão](<images/save.png>)
 
 
 ## Passo 4: Criar um Dashboard com Painéis do Zabbix
@@ -115,7 +115,7 @@ Agora você pode começar a criar dashboards no Grafana com os dados do Zabbix.
 Para criar um dashboard do zero, clique em Dashboard -> Create Dashboard e adicione um painel. Configure as consultas utilizando o Data Source do Zabbix e escolha as métricas desejadas.
 
 > **Imagem:**  
-> ![Criação do Dashboard](dashboard.png)
+> ![Criação do Dashboard](images/dashboard.png)
 
 ## Passo 5: Verificar e Ajustar a Visualização
 
